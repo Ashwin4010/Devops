@@ -48,7 +48,7 @@ pipeline {
                 sh 'sudo chown -R cloudadmin:cloudadmin apache-tomcat-8.5.24'
                 sh 'sudo cp tomcat-users.xml apache-tomcat-8.5.24/conf/tomcat-users.xml'
                 sh 'sudo cp context.xml apache-tomcat-8.5.24/webapps/manager/META-INF/context.xml'
-                sh 'sudo sed -i "s/8080/8081/g" apache-tomcat-8.5.24/conf/server.xml'
+                sh 'sudo sed -i "s/8080/8082/g" apache-tomcat-8.5.24/conf/server.xml'
         }
 }        
      stage('Deploy Sample Application To Tomcat Server') {
